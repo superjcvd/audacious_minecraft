@@ -1,2 +1,2 @@
-# audacious_minecraft
-Minecraft server docker image
+docker build --no-cache --tag audacious_minecraft .
+docker build --tag audacious_minecraft .
