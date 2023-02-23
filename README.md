@@ -1,2 +1,3 @@
-docker build --no-cache --tag audacious_minecraft .
-docker build --tag audacious_minecraft .
+## Instructions 
+
+`docker build --tag audacious_minecraft .`
