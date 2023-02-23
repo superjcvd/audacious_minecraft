@@ -8,17 +8,17 @@ services:
       MINECRAFT_ENV: 'production'
     volumes:
       - audacious_minecraft:/audacious_minecraft/
+
     ports:
       - '25565'
       - '19132'
       - '19133'
-    networks:
-      - local
+
 
 # Names our volume
 volumes:
   audacious_minecraft:
 
-networks:
-  local:
-    driver: host
+# networks:
+#   local:
+#     driver: host
