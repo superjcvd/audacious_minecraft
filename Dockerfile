@@ -19,6 +19,7 @@ RUN apt-get -y install nano \
 RUN apt-get autoremove \
     && apt-get clean
 
+RUN mkdir server
 COPY system/ /
 
 
@@ -35,12 +36,9 @@ COPY system/ /
 # RUN mkdir -p /var/run/pdns-recursor
 # RUN chown pdns:pdns /etc/dnsdist/dnsdist.conf
 
-EXPOSE 25565/udp
-EXPOSE 25565/tcp
-EXPOSE 19132/udp
-EXPOSE 19132/tcp
-EXPOSE 19133/udp
-EXPOSE 19133/tcp
+EXPOSE 25565
+EXPOSE 19132
+EXPOSE 19133
 
 CMD ["/usr/bin/supervisord"]
 
