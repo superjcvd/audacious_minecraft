@@ -4,21 +4,13 @@ services:
   audacious_minecraft:
     image: audacious_minecraft:latest
     restart: always
-    environment:
-      MINECRAFT_ENV: 'production'
     volumes:
-      - audacious_minecraft:/audacious_minecraft/
+      - audacious_minecraft:/audacious_minecraft/server/
 
     ports:
-      - '25565'
-      - '19132'
-      - '19133'
-
+      - '25565:25565'
+      - '25575:25575'
 
 # Names our volume
 volumes:
   audacious_minecraft:
-
-# networks:
-#   local:
-#     driver: host

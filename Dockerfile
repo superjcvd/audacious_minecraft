@@ -23,22 +23,8 @@ RUN mkdir server
 COPY system/ /
 
 
-
-# COPY resources/database_dev.db /var/audacious_dns/database/database.db
-# RUN groupadd database
-# RUN usermod -aG database pdns
-# RUN chgrp -R database /var/audacious_dns/database/
-# RUN chmod -R 664 /var/audacious_dns/database/
-# RUN mkdir -p /var/audacious_dns/database/
-# RUN chown -R pdns:pdns /var/audacious_dns/database/
-
-# RUN pip3 install ${application}.tar.gz
-# RUN mkdir -p /var/run/pdns-recursor
-# RUN chown pdns:pdns /etc/dnsdist/dnsdist.conf
-
 EXPOSE 25565
-EXPOSE 19132
-EXPOSE 19133
+EXPOSE 25575
 
 CMD ["/usr/bin/supervisord"]
 
